@@ -67,7 +67,7 @@ static RMServer *sharedServer;
 - (void)postWithInfo:(id)userInfo url:(NSString *)url success:(void (^)(id JSON))success error:(void (^)(NSError *error))errorBlock
 {
  
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 
     NSMutableArray *animiteArray = [[NSMutableArray alloc]init];
 

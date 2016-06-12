@@ -181,8 +181,8 @@ static RMTabBarViewController *sharedTabBarController;
             CGRect tabBarFrame = TaBBarFrame;
             
             navBarFrame.origin.y = 20;
-            scrollViewFrame.origin.y += 44;
-            scrollViewFrame.size.height -= 44;
+            scrollViewFrame.origin.y += 64;
+            scrollViewFrame.size.height -= 64;
             tabBarFrame.origin.y -= 65;
             
             [UIView animateWithDuration:0.2 animations:^{
@@ -202,8 +202,8 @@ static RMTabBarViewController *sharedTabBarController;
             CGRect tabBarFrame = TaBBarFrame;
             
             frame.origin.y = -24;
-            scrollViewFrame.origin.y -= 44;
-            scrollViewFrame.size.height += 44;
+            scrollViewFrame.origin.y -= 64;
+            scrollViewFrame.size.height += 64;
             tabBarFrame.origin.y += 65;
             
             
