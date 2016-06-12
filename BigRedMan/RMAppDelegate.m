@@ -6,17 +6,31 @@
 //  Copyright © 2016年 Duanshaoxiong. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RMAppDelegate.h"
+#import "RMTabBarViewController.h"
+#import "RMLoginController.h"
 
-@interface AppDelegate ()
+@interface RMAppDelegate (){
+
+    RMLoginController *rootViewController;
+    RMTabBarViewController *tabBarViewController;
+}
 
 @end
 
-@implementation AppDelegate
+@implementation RMAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    
+    
+    tabBarViewController = [[RMTabBarViewController alloc]init];
+    
+    self.window.rootViewController = tabBarViewController;
+    
     return YES;
 }
 
