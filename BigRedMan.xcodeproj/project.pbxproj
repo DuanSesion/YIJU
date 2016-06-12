@@ -302,7 +302,7 @@
 		9052C1AC1D07F66000859D7F /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				9085E6B01D0D280100561E93 /* GDRNavigationBarView */,
+				9085E6B01D0D280100561E93 /* RMRNavigationBarView */,
 				C8F24BC81D0C651A00D91606 /* Lockbox */,
 				9052C1D11D07F6A700859D7F /* SDCycleScrollView */,
 				9052C1CD1D07F69900859D7F /* Photo */,
@@ -460,12 +460,13 @@
 			path = HomeController;
 			sourceTree = "<group>";
 		};
-		9085E6B01D0D280100561E93 /* GDRNavigationBarView */ = {
+		9085E6B01D0D280100561E93 /* RMRNavigationBarView */ = {
 			isa = PBXGroup;
 			children = (
 				9085E6B11D0D280100561E93 /* RMRNavigationBarView.h */,
 				9085E6B21D0D280100561E93 /* RMRNavigationBarView.m */,
 			);
+			name = RMRNavigationBarView;
 			path = GDRNavigationBarView;
 			sourceTree = "<group>";
 		};

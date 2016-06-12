@@ -28,6 +28,9 @@
 @property(nonatomic,assign)NSInteger arrayCount;
 @property(nonatomic,assign)NSInteger width;
 @property(nonatomic,assign)BOOL flag;
+//按钮
+@property(nonatomic,retain)NSMutableArray *buttons;
+
 @end
 
 @implementation RMRNavigationBarView
@@ -46,15 +49,17 @@
 - (void)createTabBarUI
 {
     self.width = 60;
-///上部分scrollView:放在导航栏
+//上部分scrollView:放在导航栏
     self.scrollViewTop = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.viewWidth - 75, 40)];
     self.scrollViewTop.contentSize = CGSizeMake(self.arrayCount * 60 , 0);
     [self addSubview:self.scrollViewTop];
     
+    _buttons = [NSMutableArray array];
+    
     for (int i = 0; i < self.arrayCount; i ++) {
-///上部scrollView中的按钮
+//上部scrollView中的按钮
         UIButton *button=[UIButton buttonWithType:0];
-        button.frame=CGRectMake(self.width * i+100, 0, self.width, 40);
+        //button.frame=CGRectMake(self.width * i+50, 0, self.width, 40);
         [button setTitle:self.titleArray[i] forState:0];
         button.tag=i+10000;
         [button setTitleColor:[UIColor whiteColor] forState:0];

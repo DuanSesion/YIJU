@@ -32,7 +32,7 @@
     
     
     
-    
+    /*
     NSMutableDictionary  *postDic = [NSMutableDictionary dictionary];
     [postDic setObject:@"81c59a3f50414acca3c705a6b735e9c3" forKey:@"api_key"];
     [postDic setObject:@"aaa88611a" forKey:@"username"];
@@ -53,6 +53,7 @@
     } error:^(NSError *error) {
         
     }];
+     */
       
     [self setLayout];
 }
@@ -70,13 +71,13 @@
     RMTabBarViewController *tabbarVc  = (id)[UIApplication sharedApplication].keyWindow.rootViewController;
     [tabbarVc followRollingScrollView:_tableView currentNan:self.navigationController];
     
-    UIImageView *background = [[UIImageView alloc]initWithFrame:_tableView.bounds];
-    background.image = [UIImage imageNamed:@"background"];
-    _tableView.backgroundView = background;
+//    UIImageView *background = [[UIImageView alloc]initWithFrame:_tableView.bounds];
+//    background.image = [UIImage imageNamed:@"background"];
+//    _tableView.backgroundView = background;
     
     
-//    nanBarView = [[RMRNavigationBarView alloc]initWithFrame:CGRectMake(0, 20, RM_SCREEN_WIDTH, 44) withWidth:RM_SCREEN_WIDTH withArray:@[@"关注",@"热门",@"最新"]];
-//    self.navigationItem.titleView = nanBarView;
+    nanBarView = [[RMRNavigationBarView alloc]initWithFrame:CGRectMake(0, 20, RM_SCREEN_WIDTH, 44) withWidth:RM_SCREEN_WIDTH withArray:@[@"关注",@"热门",@"最新"]];
+    self.navigationItem.titleView = nanBarView;
 }
 
 #pragma mark UITableViewDelegate,UITableViewDataSource

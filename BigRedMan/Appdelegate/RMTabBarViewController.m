@@ -186,9 +186,10 @@ static RMTabBarViewController *sharedTabBarController;
             tabBarFrame.origin.y -= 65;
             
             [UIView animateWithDuration:0.2 animations:^{
-                NavBarFrame = navBarFrame;
+                //NavBarFrame = navBarFrame;
                 scrollView.frame=scrollViewFrame;
                 TaBBarFrame = tabBarFrame;
+                [currentNan setNavigationBarHidden:NO animated:YES];
             }];
             isHidden= NO;
         }
@@ -208,11 +209,10 @@ static RMTabBarViewController *sharedTabBarController;
             
             
             [UIView animateWithDuration:0.2 animations:^{
-                NavBarFrame = frame;
+                //NavBarFrame = frame;
                 scrollView.frame=scrollViewFrame;
                 TaBBarFrame = tabBarFrame;
-                
-            } completion:^(BOOL finished) {
+                [currentNan setNavigationBarHidden:YES animated:YES];
                 
             }];
              isHidden = YES;
