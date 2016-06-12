@@ -54,7 +54,7 @@
     for (int i = 0; i < self.arrayCount; i ++) {
 ///上部scrollView中的按钮
         UIButton *button=[UIButton buttonWithType:0];
-        button.frame=CGRectMake(self.width * i, 0, self.width, 40);
+        button.frame=CGRectMake(self.width * i+100, 0, self.width, 40);
         [button setTitle:self.titleArray[i] forState:0];
         button.tag=i+10000;
         [button setTitleColor:[UIColor whiteColor] forState:0];

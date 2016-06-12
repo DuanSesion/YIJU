@@ -75,7 +75,7 @@
     _tableView.backgroundView = background;
     
     
-    nanBarView = [[RMRNavigationBarView alloc]initWithFrame:CGRectMake(0, 0, RM_SCREEN_WIDTH, 64) withWidth:RM_SCREEN_WIDTH withArray:@[@"关注",@"热门",@"最新"]];
+    nanBarView = [[RMRNavigationBarView alloc]initWithFrame:CGRectMake(0, 20, RM_SCREEN_WIDTH, 44) withWidth:RM_SCREEN_WIDTH withArray:@[@"关注",@"热门",@"最新"]];
     self.navigationItem.titleView = nanBarView;
 }
 
