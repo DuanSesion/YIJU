@@ -102,42 +102,27 @@ static RMServer *sharedServer;
                   
                   [SVProgressHUD showWithStatus:responseObject[@"error_description"]];
                   [SVProgressHUD dismissWithDelay:3];
-                  
-                  
-                  NSDictionary *JSON = [Lockbox dictionaryForKey:key];
-                  if (success) {
-                      success(JSON);
-                  }
+ 
                   
               }else{
                   [SVProgressHUD dismiss];
-                  [Lockbox setDictionary:responseObject forKey:key];
                   
-                  if (success) {
-                      success(responseObject);
-                  }
+                   NSString *key  = [encodedUrl MD5Hash];
+                  [self saveCache:responseObject forKey:key];
               }
               
           });
           
       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
           
-//          if (errorBlock){
-//              errorBlock(error);
-//          }
           if (error) {
               
               [SVProgressHUD showWithStatus:@"请检查网络设置重试"];
               [SVProgressHUD dismissWithDelay:3];
               
-              NSString *key =  [encodedUrl MD5Hash];
-              NSDictionary *JSON = [Lockbox dictionaryForKey:key];
-              if (success) {
-                  success(JSON);
-              }
+              NSString *key  = [encodedUrl MD5Hash];
+              [self getCache:success forKey:key];
           }
-
-          
       }];
 }
 
@@ -189,22 +174,32 @@ static RMServer *sharedServer;
 #pragma mark -- 其他接口 --
 - (void)uploadFile:(NSData *)fileData withInfo:(NSString *)userInfo fileType:(NSString *)type success:(void (^)(id JSON))success
 {
-    /*
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSString *encodedUrl = [[NSString stringWithFormat:@"%@?%@",URL_FILE_UPLOAD,userInfo] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 10.0f;
-    [manager POST:encodedUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:fileData name:@"name" fileName:[NSString stringWithFormat:@"file.%@",type] mimeType:@"application/octet-stream"];
-    } success:^(AFHTTPRequestOperation *operation,id responseObject)  {
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",nil];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *url = @"";
+    NSString *encodedUrl = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet];
+    
+    [manager POST:encodedUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+          [formData appendPartWithFileData:fileData name:@"name" fileName:[NSString stringWithFormat:@"file.%@",type] mimeType:@"application/octet-stream"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             success(responseObject);
         });
-    }failure:^(AFHTTPRequestOperation *operation,NSError *error) {
-        [SVProgressHUD showImage:nil status:@"该文件因网络超时原因，未能发送成功，请稍后重试"]; //原提示框样式更改,zhouzhichen
-        NSLog(@"Error: %@", error);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SVProgressHUD showImage:nil status:@"该文件因网络超时原因，未能发送成功，请稍后重试"];
     }];
-     */
+    
 }
 
 - (void)uploadImages:(RMUpLoadItem *)item success:(void (^)(id JSON))upLoadSuccess
@@ -253,6 +248,37 @@ static RMServer *sharedServer;
         }
     }];
      */
+}
+
+//保存最新缓存
+- (void)saveCache:(id)JSON forKey:(NSString*)key{
+    
+    if (JSON) {
+        
+        NSError *parseError = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:JSON options:NSJSONWritingPrettyPrinted error:&parseError];
+        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        [RMLockbox setString:jsonStr forKey:key];
+    }
+}
+
+//获取最新缓存
+- (void)getCache:(void (^)(id JSON))success forKey:(NSString*)key{
+    
+    NSString *jsonStr = [RMLockbox stringForKey:key];
+    NSDictionary *responseJSON;
+    
+    if (jsonStr) {
+        
+         NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+         responseJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+    }
+    
+    if (responseJSON && success) {
+        success(responseJSON);
+    }
+    
 }
 
 @end

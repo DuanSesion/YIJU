@@ -20,6 +20,7 @@
 #define RM_SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 #define RM_SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define RGBA(r,g,b,a)     [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define SCREEN_SCALE      RM_SCREEN_WIDTH/320.0f
 
 
 #endif /* RMPrefixHeader_pch */

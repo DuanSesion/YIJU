@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RMUser.h"
 #import "YYKit.h"
-#import "Lockbox.h"
+#import "RMLockbox.h"
 
 @class RMUpLoadItem;
 

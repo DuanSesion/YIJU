@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 Hawk iMedia. All rights reserved.
 //
 
-#import "Lockbox.h"
+#import "RMLockbox.h"
 #import <Security/Security.h>
 
 // Define DLog if user hasn't already defined his own implementation
@@ -23,21 +23,21 @@
 #define LOCKBOX_ID __bridge id
 #define LOCKBOX_DICTREF __bridge CFDictionaryRef
 
-static Lockbox *_lockBox = nil;
+static RMLockbox *_lockBox = nil;
 static NSString *_defaultKeyPrefix = nil;
 
-@interface Lockbox()
+@interface RMLockbox()
 @property (strong, nonatomic, readwrite) NSString *keyPrefix;
 @end
 
-@implementation Lockbox
+@implementation RMLockbox
 
 +(void)initialize
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _defaultKeyPrefix = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:(NSString*)kCFBundleIdentifierKey];
-        _lockBox = [[Lockbox alloc] init];
+        _lockBox = [[RMLockbox alloc] init];
     });
 }
 

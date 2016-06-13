@@ -37,6 +37,9 @@
 		9052C1F91D0807F700859D7F /* 秀域标志-01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9052C1F41D0807F700859D7F /* 秀域标志-01@3x.png */; };
 		9052C1FA1D0807F700859D7F /* 立即体验@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9052C1F51D0807F700859D7F /* 立即体验@2x.png */; };
 		9052C1FB1D0807F700859D7F /* 立即体验@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9052C1F61D0807F700859D7F /* 立即体验@3x.png */; };
+		90693F641D0E4F1C002C2DC5 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 90693F5F1D0E4F1C002C2DC5 /* MBProgressHUD+Add.m */; };
+		90693F651D0E4F1C002C2DC5 /* UIImage+UIImageInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 90693F611D0E4F1C002C2DC5 /* UIImage+UIImageInit.m */; };
+		90693F661D0E4F1C002C2DC5 /* UILabel+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 90693F631D0E4F1C002C2DC5 /* UILabel+Ext.m */; };
 		9085E6AB1D0CF95800561E93 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9085E6AA1D0CF95800561E93 /* background.png */; };
 		9085E6B31D0D280100561E93 /* RMRNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9085E6B21D0D280100561E93 /* RMRNavigationBarView.m */; };
 		C8F24BA11D0BDD3400D91606 /* RMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F24BA01D0BDD3400D91606 /* RMTabBarViewController.m */; };
@@ -54,7 +57,7 @@
 		C8F24BC11D0C29EC00D91606 /* loading.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8F24BC01D0C29EC00D91606 /* loading.bundle */; };
 		C8F24BC41D0C2F6800D91606 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F24BC31D0C2F6800D91606 /* HomeController.m */; };
 		C8F24BC71D0C5E5E00D91606 /* RMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F24BC61D0C5E5E00D91606 /* RMUser.m */; };
-		C8F24BCF1D0C651A00D91606 /* Lockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F24BCC1D0C651A00D91606 /* Lockbox.m */; };
+		C8F24BCF1D0C651A00D91606 /* RMLockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F24BCC1D0C651A00D91606 /* RMLockbox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,12 @@
 		9052C1F41D0807F700859D7F /* 秀域标志-01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "秀域标志-01@3x.png"; sourceTree = "<group>"; };
 		9052C1F51D0807F700859D7F /* 立即体验@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "立即体验@2x.png"; sourceTree = "<group>"; };
 		9052C1F61D0807F700859D7F /* 立即体验@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "立即体验@3x.png"; sourceTree = "<group>"; };
+		90693F5E1D0E4F1C002C2DC5 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		90693F5F1D0E4F1C002C2DC5 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		90693F601D0E4F1C002C2DC5 /* UIImage+UIImageInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageInit.h"; sourceTree = "<group>"; };
+		90693F611D0E4F1C002C2DC5 /* UIImage+UIImageInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageInit.m"; sourceTree = "<group>"; };
+		90693F621D0E4F1C002C2DC5 /* UILabel+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Ext.h"; sourceTree = "<group>"; };
+		90693F631D0E4F1C002C2DC5 /* UILabel+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Ext.m"; sourceTree = "<group>"; };
 		9085E6AA1D0CF95800561E93 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9085E6B11D0D280100561E93 /* RMRNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRNavigationBarView.h; sourceTree = "<group>"; };
 		9085E6B21D0D280100561E93 /* RMRNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRNavigationBarView.m; sourceTree = "<group>"; };
@@ -154,8 +163,8 @@
 		C8F24BC31D0C2F6800D91606 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		C8F24BC51D0C5E5E00D91606 /* RMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMUser.h; sourceTree = "<group>"; };
 		C8F24BC61D0C5E5E00D91606 /* RMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMUser.m; sourceTree = "<group>"; };
-		C8F24BCB1D0C651A00D91606 /* Lockbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lockbox.h; sourceTree = "<group>"; };
-		C8F24BCC1D0C651A00D91606 /* Lockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lockbox.m; sourceTree = "<group>"; };
+		C8F24BCB1D0C651A00D91606 /* RMLockbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLockbox.h; sourceTree = "<group>"; };
+		C8F24BCC1D0C651A00D91606 /* RMLockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLockbox.m; sourceTree = "<group>"; };
 		F404D8A1DC66AB2355F32C75 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				9085E6B01D0D280100561E93 /* RMRNavigationBarView */,
+				90693F5D1D0E4F1C002C2DC5 /* Extends */,
 				C8F24BC81D0C651A00D91606 /* Lockbox */,
 				9052C1D11D07F6A700859D7F /* SDCycleScrollView */,
 				9052C1CD1D07F69900859D7F /* Photo */,
@@ -452,6 +462,19 @@
 			path = LivePlayerController;
 			sourceTree = "<group>";
 		};
+		90693F5D1D0E4F1C002C2DC5 /* Extends */ = {
+			isa = PBXGroup;
+			children = (
+				90693F5E1D0E4F1C002C2DC5 /* MBProgressHUD+Add.h */,
+				90693F5F1D0E4F1C002C2DC5 /* MBProgressHUD+Add.m */,
+				90693F601D0E4F1C002C2DC5 /* UIImage+UIImageInit.h */,
+				90693F611D0E4F1C002C2DC5 /* UIImage+UIImageInit.m */,
+				90693F621D0E4F1C002C2DC5 /* UILabel+Ext.h */,
+				90693F631D0E4F1C002C2DC5 /* UILabel+Ext.m */,
+			);
+			path = Extends;
+			sourceTree = "<group>";
+		};
 		9085E6A91D0CF92700561E93 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,8 +521,8 @@
 		C8F24BC81D0C651A00D91606 /* Lockbox */ = {
 			isa = PBXGroup;
 			children = (
-				C8F24BCB1D0C651A00D91606 /* Lockbox.h */,
-				C8F24BCC1D0C651A00D91606 /* Lockbox.m */,
+				C8F24BCB1D0C651A00D91606 /* RMLockbox.h */,
+				C8F24BCC1D0C651A00D91606 /* RMLockbox.m */,
 			);
 			path = Lockbox;
 			sourceTree = "<group>";
@@ -709,19 +732,22 @@
 				9052C1781D07F53200859D7F /* RMAppDelegate.m in Sources */,
 				C8F24BA11D0BDD3400D91606 /* RMTabBarViewController.m in Sources */,
 				C8F24BA41D0BDF6400D91606 /* RMTabBar.m in Sources */,
+				90693F641D0E4F1C002C2DC5 /* MBProgressHUD+Add.m in Sources */,
 				9052C1C11D07F67B00859D7F /* NSString+XHMD5.m in Sources */,
 				9052C1E71D07F6A700859D7F /* UIView+SDExtension.m in Sources */,
+				90693F651D0E4F1C002C2DC5 /* UIImage+UIImageInit.m in Sources */,
 				C8F24BC41D0C2F6800D91606 /* HomeController.m in Sources */,
 				9052C1E21D07F6A700859D7F /* TAAnimatedDotView.m in Sources */,
 				9052C1E51D07F6A700859D7F /* SDCollectionViewCell.m in Sources */,
 				9052C1CC1D07F69200859D7F /* RMUpLoadItem.m in Sources */,
 				9052C1C01D07F67B00859D7F /* NSDateFormatter+Category.m in Sources */,
-				C8F24BCF1D0C651A00D91606 /* Lockbox.m in Sources */,
+				C8F24BCF1D0C651A00D91606 /* RMLockbox.m in Sources */,
 				9052C1CB1D07F69200859D7F /* RMServer.m in Sources */,
 				9052C1D01D07F69900859D7F /* RMPhotoImage.m in Sources */,
 				9052C1AB1D07F5F000859D7F /* RMLoginController.m in Sources */,
 				9052C1C51D07F67B00859D7F /* UIColor+XYStyle.m in Sources */,
 				9052C1E31D07F6A700859D7F /* TADotView.m in Sources */,
+				90693F661D0E4F1C002C2DC5 /* UILabel+Ext.m in Sources */,
 				9052C1751D07F53200859D7F /* main.m in Sources */,
 				9052C1E41D07F6A700859D7F /* TAPageControl.m in Sources */,
 				9052C1E61D07F6A700859D7F /* SDCycleScrollView.m in Sources */,

@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Lockbox : NSObject
+@interface RMLockbox : NSObject
 
 #ifdef DEBUG
 // For unit tests
